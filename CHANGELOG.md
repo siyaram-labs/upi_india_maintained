@@ -1,3 +1,10 @@
+## 3.1.0
+* Migrated Android plugin to v2 embedding (declarative Gradle plugin system)
+* Updated to AGP 8.3.0 and Gradle 8.4 for modern Flutter compatibility
+* Added namespace configuration for Android (required for AGP 8.0+)
+* Fixed build compatibility with Flutter 3.0+ and Android 12+
+* Added explicit `android:exported` attribute for MainActivity
+
 ## 3.0.1
 * `getAllUpiApps()` now supports Android 11+ 
 * Updated Readme

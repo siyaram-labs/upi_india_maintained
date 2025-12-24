@@ -26,13 +26,12 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.plugin.common.PluginRegistry.ActivityResultListener;
 
 /**
  * UpiIndiaPlugin
  */
-public class UpiIndiaPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware, PluginRegistry.ActivityResultListener {
+public class UpiIndiaPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware, ActivityResultListener {
     static final String TAG = "UPI INDIA";
     static final int uniqueRequestCode = 512078;
 
