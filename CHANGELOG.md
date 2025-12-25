@@ -1,3 +1,11 @@
+## 3.1.1
+* Android: Updated plugin `compileSdkVersion` to 35 for Android SDK 35 compatibility
+* Example: Use `flutter.compileSdkVersion` and `flutter.targetSdkVersion` for automatic SDK updates
+* Fix: UPI merchant code parameter now correctly uses `&mc=` (was missing `=`)
+* Android 11+: Refined package visibility `<queries>` to specify `upi://pay` with `android:host="pay"`
+* Build: Replaced deprecated `jcenter()` with `mavenCentral()` repository
+* Example: Disabled Jetifier (not needed with v2 embedding) and increased Gradle heap to 2GB
+
 ## 3.1.0
 * Migrated Android plugin to v2 embedding (declarative Gradle plugin system)
 * Updated to AGP 8.3.0 and Gradle 8.4 for modern Flutter compatibility
