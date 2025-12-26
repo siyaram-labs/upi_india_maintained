@@ -1,3 +1,6 @@
+## 3.1.2
+* Example(Android): Added android.suppressUnsupportedCompileSdk=35 for compileSdk 35 builds.
+
 ## 3.1.1
 * Android: Updated plugin `compileSdkVersion` to 35 for Android SDK 35 compatibility
 * Example: Use `flutter.compileSdkVersion` and `flutter.targetSdkVersion` for automatic SDK updates
