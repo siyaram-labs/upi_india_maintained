@@ -36,6 +36,7 @@ enum _ValidUpiApps {
   miPayGlobal,
   miPayXiaomi,
   mobikwik,
+  navi,
   orientalPay,
   paytm,
   paywiz,
@@ -163,6 +164,9 @@ class UpiApp {
 
   /// Mobikwik: com.mobikwik_new
   static UpiApp mobikwik = UpiApp._fromEnum(_ValidUpiApps.mobikwik);
+
+  /// Navi(Navi Limited): com.naviapp
+  static UpiApp navi = UpiApp._fromEnum(_ValidUpiApps.navi);
 
   /// BHIM Oriental Pay(Oriental Bank of Commerce): com.mgs.obcbank
   static UpiApp orientalPay = UpiApp._fromEnum(_ValidUpiApps.orientalPay);
@@ -315,6 +319,8 @@ class UpiApp {
         return 'MiPay';
       case _ValidUpiApps.mobikwik:
         return 'Mobikwik';
+      case _ValidUpiApps.navi:
+        return 'Navi';
       case _ValidUpiApps.orientalPay:
         return 'Oriental Pay';
       case _ValidUpiApps.paytm:
@@ -426,6 +432,8 @@ class UpiApp {
         return 'com.mipay.wallet.in';
       case _ValidUpiApps.mobikwik:
         return 'com.mobikwik_new';
+      case _ValidUpiApps.navi:
+        return 'com.naviapp';
       case _ValidUpiApps.orientalPay:
         return 'com.mgs.obcbank';
       case _ValidUpiApps.paytm:

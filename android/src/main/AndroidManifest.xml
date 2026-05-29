@@ -34,6 +34,7 @@
     <package android:name="com.mipay.in.wallet" />
     <package android:name="com.mipay.wallet.in" />
     <package android:name="com.mobikwik_new" />
+    <package android:name="com.naviapp" />
     <package android:name="com.mgs.obcbank" />
     <package android:name="net.one97.paytm" />
     <package android:name="com.idbibank.paywiz" />

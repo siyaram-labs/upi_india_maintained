@@ -28,6 +28,7 @@ List<String> _verifiedApps = [
   UpiApp.khaaliJeb.packageName,
   UpiApp.mahaUpi.packageName,
   UpiApp.mobikwik.packageName,
+  UpiApp.navi.packageName,
   UpiApp.orientalPay.packageName,
   UpiApp.paytm.packageName,
   UpiApp.paywiz.packageName,
@@ -96,6 +97,11 @@ class UpiIndia {
     /// It is recommended to set this to false for production.
     bool allowNonVerifiedApps = false,
 
+    /// Set this to true to return ALL apps detected by the system that can
+    /// handle the intent, regardless of whether they are in the predefined lists.
+    /// Bypasses the whitelist filter entirely.
+    bool allowAllApps = false,
+
     /// Pass the [UpiApp]s that you want to support.
     /// Only these apps will be returned if they are installed on user device while others will be dropped.
     List<UpiApp>? includeOnly,
@@ -112,6 +118,14 @@ class UpiIndia {
       }
     }
     List<UpiApp> upiIndiaApps = [];
+
+    if (allowAllApps) {
+      apps!.forEach((app) {
+        upiIndiaApps.add(UpiApp.fromMap(Map<String, dynamic>.from(app)));
+      });
+      return upiIndiaApps;
+    }
+
     List<String> _validApps;
     if (includeOnly != null && includeOnly.length > 0) {
       _validApps = [];
